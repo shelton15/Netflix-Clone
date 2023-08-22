@@ -10,7 +10,6 @@
 		88A7AFCE2A952131009D3562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7AFCD2A952131009D3562 /* AppDelegate.swift */; };
 		88A7AFD02A952131009D3562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7AFCF2A952131009D3562 /* SceneDelegate.swift */; };
 		88A7AFD22A952131009D3562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7AFD12A952131009D3562 /* ViewController.swift */; };
-		88A7AFD52A952131009D3562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A7AFD32A952131009D3562 /* Main.storyboard */; };
 		88A7AFD72A952152009D3562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A7AFD62A952152009D3562 /* Assets.xcassets */; };
 		88A7AFDA2A952153009D3562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A7AFD82A952153009D3562 /* LaunchScreen.storyboard */; };
 		88A7AFE52A952156009D3562 /* Netflix_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7AFE42A952156009D3562 /* Netflix_CloneTests.swift */; };
@@ -40,7 +39,6 @@
 		88A7AFCD2A952131009D3562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A7AFCF2A952131009D3562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88A7AFD12A952131009D3562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88A7AFD42A952131009D3562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88A7AFD62A952152009D3562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88A7AFD92A952153009D3562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88A7AFDB2A952153009D3562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				88A7AFCD2A952131009D3562 /* AppDelegate.swift */,
 				88A7AFCF2A952131009D3562 /* SceneDelegate.swift */,
 				88A7AFD12A952131009D3562 /* ViewController.swift */,
-				88A7AFD32A952131009D3562 /* Main.storyboard */,
 				88A7AFD62A952152009D3562 /* Assets.xcassets */,
 				88A7AFD82A952153009D3562 /* LaunchScreen.storyboard */,
 				88A7AFDB2A952153009D3562 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				88A7AFDA2A952153009D3562 /* LaunchScreen.storyboard in Resources */,
 				88A7AFD72A952152009D3562 /* Assets.xcassets in Resources */,
-				88A7AFD52A952131009D3562 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		88A7AFD32A952131009D3562 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88A7AFD42A952131009D3562 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88A7AFD82A952153009D3562 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +428,7 @@
 				DEVELOPMENT_TEAM = Q4VF449KQ4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Netflix Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Netflix Clone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -468,6 +457,7 @@
 				DEVELOPMENT_TEAM = Q4VF449KQ4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Netflix Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Netflix Clone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
