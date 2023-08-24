@@ -21,6 +21,9 @@ class HomeViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTabel)
+        
+        homeFeedTabel.delegate = self
+        homeFeedTabel.dataSource = self
     }
     
 
@@ -29,4 +32,17 @@ class HomeViewController: UIViewController {
         homeFeedTabel.frame = view.bounds
     }
 
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Hello World"
+        return cell
+    }
 }
