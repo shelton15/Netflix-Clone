@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
         
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "person "), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
         navigationController?.navigationBar.tintColor = .white
