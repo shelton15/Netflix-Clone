@@ -20,7 +20,7 @@ class APICaller {
     
     func getTrendingMovies(completion: @escaping (String) -> Void) {
         
-        guard let url = URL(string: "\(Constants.baseURL)/3/trending/all/day?api_keys\(Constants.API_key)") else {return}
+        guard let url = URL(string: "\(Constants.baseURL)/3/trending/all/day?api_key=\(Constants.API_key)") else {return}
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else {
