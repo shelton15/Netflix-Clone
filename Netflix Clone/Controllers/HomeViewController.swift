@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
         
         homeFeedTabel.delegate = self
         homeFeedTabel.dataSource = self
+        
+        homeFeedTabel.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
     }
     
 
