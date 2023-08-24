@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let sectionTitles: [String] = ["Trending Movies", "Trending TV", "Upcoming Movies", "Top Rated"]
 
     private let homeFeedTabel: UITableView = {
         
@@ -79,5 +81,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 40
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //remove the sticky nature of the navbar
+        
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
     
 }
