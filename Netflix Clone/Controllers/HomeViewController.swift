@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+//        let logoButton = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+//        navigationItem.setLeftBarButton(logoButton, animated: false)
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
@@ -66,8 +68,11 @@ class HomeViewController: UIViewController {
 //
 //        }
         
-        APICaller.shared.getTrendingTvs { results in
+//        APICaller.shared.getTrendingTvs { results in
             //
+//        }
+        APICaller.shared.getUpcomingMovies { _ in 
+            
         }
     }
 
