@@ -103,7 +103,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             
         case Sections.TrendingTv.rawValue:
             
-            APICaller.shared.getTrendingTv { result in
+            APICaller.shared.getTrendingTvs { result in
                 switch result {
                 case.success(let titles):
                     cell.configure(with: titles)
@@ -144,6 +144,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     print(error.localizedDescription)
                 }
             }
+            
+        default:
+            return UITableViewCell()
             
         }
         
