@@ -36,7 +36,7 @@ class APICaller {
                 completion(.success(results.results))
                 
             } catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedTogetData))
             }
             
         }
@@ -54,11 +54,10 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
+                completion(.success(results.results))
             }
             catch {
-                print(error.localizedDescription)
-            }
+                completion(.failure(APIError.failedTogetData))            }
         }
         
         task.resume()
@@ -74,10 +73,9 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
+                completion(.success(results.results))
             } catch {
-                print(error.localizedDescription)
-            }
+                completion(.failure(APIError.failedTogetData))            }
         }
         
         task.resume()
@@ -93,10 +91,9 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
+                completion(.success(results.results))
             } catch {
-                print(error.localizedDescription)
-            }
+                completion(.failure(APIError.failedTogetData))            }
         }
         
         task.resume()
@@ -112,10 +109,9 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
+                completion(.success(results.results))
             } catch {
-                print(error.localizedDescription)
-            }
+                completion(.failure(APIError.failedTogetData))             }
         }
         
         task.resume()
