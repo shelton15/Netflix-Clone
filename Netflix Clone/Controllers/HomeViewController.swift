@@ -88,6 +88,65 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        switch indexPath.section {
+            
+        case Sections.TrendingMovies.rawValue:
+            
+            APICaller.shared.getTrendingMovies { result in
+                switch result {
+                case.success(let titles):
+                    cell.configure(with: titles)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.TrendingTv.rawValue:
+            
+            APICaller.shared.getTrendingTv { result in
+                switch result {
+                case.success(let titles):
+                    cell.configure(with: titles)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.Popular.rawValue:
+            
+            APICaller.shared.getPopular { result in
+                switch result {
+                case.success(let titles):
+                    cell.configure(with: titles)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.Upcoming.rawValue:
+            
+            APICaller.shared.getUpcomingMovies { result in
+                switch result {
+                case.success(let titles):
+                    cell.configure(with: titles)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.TopRated.rawValue:
+            
+            APICaller.shared.getTopRated { result in
+                switch result {
+                case.success(let titles):
+                    cell.configure(with: titles)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
+        
         return cell
     }
     
