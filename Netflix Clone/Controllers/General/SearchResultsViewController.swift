@@ -9,9 +9,9 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
-    private var titles: [Title] = [Title]()
+    public var titles: [Title] = [Title]()
     
-    private let searchResultsCollectionView: UICollectionView = {
+    public let searchResultsCollectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         //making design responsive
@@ -48,7 +48,7 @@ class SearchResultsViewController: UIViewController {
 extension SearchResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return titles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,8 +57,8 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
             return UICollectionViewCell()
         }
         
-        cell.backgroundColor = .blue
-        
+        let title = titles[indexPath.row]
+        cell.configure(with: title.poster_path ?? "")
         return cell
         
     }
