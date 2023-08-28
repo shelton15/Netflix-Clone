@@ -25,6 +25,8 @@ class SearchViewController: UIViewController {
         controller.searchBar.placeholder = "Search for a Movie or a Tv Show"
         controller.searchBar.searchBarStyle = .minimal
         
+        return controller
+        
     }()
     
     override func viewDidLoad() {
@@ -40,6 +42,8 @@ class SearchViewController: UIViewController {
         
         discoverTable.delegate = self
         discoverTable.dataSource = self
+        
+        navigationItem.searchController = searchController
         
         fetchDiscoverMovies()
     }
