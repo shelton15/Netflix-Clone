@@ -141,7 +141,7 @@ class APICaller {
             return
         }
         
-        guard let url = URL(string: "\(Constants.baseURL)/3/search/movie?api_key=\(Constants.API_key)&query=\(query)") else {return}
+        guard let url = URL(string: "\(Constants.baseURL)/3/search/movie?query=\(query)&api_key=\(Constants.API_key)") else {return}
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, _, error in
             guard let data = data, error == nil else {
                 return
