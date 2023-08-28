@@ -14,6 +14,7 @@ class TitleTableViewCell: UITableViewCell {
     private let playTitleButton: UIButton = {
         
         let button = UIButton()
+        button.setImage(UIImage(systemName: "play.circle"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -62,8 +63,14 @@ class TitleTableViewCell: UITableViewCell {
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ]
         
+        let playTitleButtonConstraints = [
+            playTitleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            playTitleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ]
+        
         NSLayoutConstraint.activate(titlesPosterUIImageViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)
+        NSLayoutConstraint.activate(playTitleButtonConstraints)
         
     }
     
