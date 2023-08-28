@@ -32,6 +32,8 @@ class UpcomingViewController: UIViewController {
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
         
+        fetchUpcoming()
+        
     }
     
     override func viewDidLayoutSubviews() {
