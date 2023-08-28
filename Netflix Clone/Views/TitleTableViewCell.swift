@@ -16,6 +16,7 @@ class TitleTableViewCell: UITableViewCell {
         let button = UIButton()
         button.setImage(UIImage(systemName: "play.circle"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .white
         
         return button
         
