@@ -163,8 +163,8 @@
 		88A9A1622A973AF3009F8DD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				88F9BC0A2A9D4D7A006F2F36 /* General */,
 				88F9BC092A9D4D24006F2F36 /* Core */,
-				88F9BC072A9D4CD4006F2F36 /* SearchResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +221,14 @@
 				88A9A1692A973EA7009F8DD5 /* DownloadsViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		88F9BC0A2A9D4D7A006F2F36 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				88F9BC072A9D4CD4006F2F36 /* SearchResultsViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
