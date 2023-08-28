@@ -9,6 +9,8 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
+    private var titles: [Title] = [Title]()
+    
     private let searchResultsCollectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
@@ -25,13 +27,29 @@ class SearchResultsViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
         view.addSubview(searchResultsCollectionView)
+        
+        searchResultsCollectionView.delegate = self
+        searchResultsCollectionView.dataSource = self
     }
     
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        
+        searchResultsCollectionView.frame = view.bounds
+    }
+    
+}
+
+
+extension SearchResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: <#T##String#>, for: <#T##IndexPath#>)
     }
     
 }
