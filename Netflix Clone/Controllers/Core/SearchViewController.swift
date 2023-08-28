@@ -18,6 +18,15 @@ class SearchViewController: UIViewController {
         return table
         
     }()
+    
+    private let searchController: UISearchController = {
+       
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = "Search for a Movie or a Tv Show"
+        controller.searchBar.searchBarStyle = .minimal
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
