@@ -36,6 +36,8 @@ class TitleTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        // prevent poster from overflowing the container
+        imageView.clipsToBounds = true
 
         return imageView
         
