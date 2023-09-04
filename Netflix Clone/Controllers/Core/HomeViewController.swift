@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         
         homeFeedTabel.tableHeaderView = headerView
         
-        
+        navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
         
         
     }
