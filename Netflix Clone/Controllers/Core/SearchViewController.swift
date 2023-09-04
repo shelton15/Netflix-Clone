@@ -130,7 +130,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension SearchViewController: UISearchResultsUpdating {
+extension SearchViewController: UISearchResultsUpdating, SearchResultsViewControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
@@ -142,6 +142,7 @@ extension SearchViewController: UISearchResultsUpdating {
             return
         }
         
+        resultsController.delegate = self
         
         APICaller.shared.search(with: query) { result in
             
@@ -155,6 +156,13 @@ extension SearchViewController: UISearchResultsUpdating {
                 }
             }
         }
+    }
+    
+    func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel) {
+        
+        let vc = TitlePreviewViewController()
+        vc.configure(with: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
