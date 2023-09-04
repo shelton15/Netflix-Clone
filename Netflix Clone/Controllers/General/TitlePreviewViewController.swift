@@ -41,7 +41,9 @@ class TitlePreviewViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .red
         button.setTitle("Download", for: .normal)
-        button.setTitleColor(.white, for: .normal )
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
         
         return button
         
@@ -91,7 +93,8 @@ class TitlePreviewViewController: UIViewController {
         let downloadButtonCOnstraints = [
             downloadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             downloadButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 25),
-            downloadButton.widthAnchor.constraint(equalToConstant: 120)
+            downloadButton.widthAnchor.constraint(equalToConstant: 140),
+            downloadButton.heightAnchor.constraint(equalToConstant: 40)
         ]
         
         NSLayoutConstraint.activate(webViewConstraints)
