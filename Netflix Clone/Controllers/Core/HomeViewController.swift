@@ -45,9 +45,6 @@ class HomeViewController: UIViewController {
         
         homeFeedTabel.tableHeaderView = headerView
         
-        navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
-        
-        
     }
     
     private func configureNavbar() {
@@ -192,7 +189,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
-        <#code#>
+        let vc = TitlePreviewViewController()
+        vc.configure(with: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
