@@ -18,6 +18,7 @@ class TitlePreviewViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.text = "One Piece"
         
         return label
         
@@ -29,6 +30,7 @@ class TitlePreviewViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.numberOfLines = 0 // setting to zero means it can take more
+        label.text = "best anime ever"
         
         return label
     }()
@@ -64,12 +66,23 @@ class TitlePreviewViewController: UIViewController {
         let webViewConstraints = [
             webView.topAnchor.constraint(equalTo: view.topAnchor),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
 //            webView.heightAnchor.constraint(equalToConstant: 250)
         ]
         
+        let titleLabelConstraints = [
+            titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: webView.leadingAnchor, constant: 20)
+        ]
         
+        let overviewLabelConstraints = [
+            overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            overviewLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 20)
+        ]
         
+        NSLayoutConstraint.activate(webViewConstraints)
+        NSLayoutConstraint.activate(titleLabelConstraints)
+        NSLayoutConstraint.activate(overviewLabelConstraints)
     }
     
 
