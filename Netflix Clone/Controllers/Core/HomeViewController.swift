@@ -87,6 +87,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        cell.delegate = self
+        
         switch indexPath.section {
             
         case Sections.TrendingMovies.rawValue:
@@ -189,8 +191,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        
         let vc = TitlePreviewViewController()
         vc.configure(with: viewModel)
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
