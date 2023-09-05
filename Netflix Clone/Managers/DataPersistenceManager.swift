@@ -12,6 +12,12 @@ import CoreData
 
 class DataPersistenceManager {
     
+    enum DatabaseError: Error {
+        
+        case failedToSaveData
+        
+    }
+    
     static let shared = DataPersistenceManager()
     
     func downloadTitleWith(model: Title, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -38,8 +44,9 @@ class DataPersistenceManager {
         
         do {
             try context.save()
+            completion(.success(()))
         } catch {
-            print(error.localizedDescription)
+            completion(.failure(DatabaseError.failedToSaveData))
         }
     }
     
