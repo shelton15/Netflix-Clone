@@ -63,6 +63,12 @@ class CollectionViewTableViewCell: UITableViewCell {
         }
     }
     
+    private func downloadTitleAt(indexPath: IndexPath) {
+        
+        print("Downloading \(titles[indexPath.row].original_title)")
+        
+    }
+    
 }
 
 
@@ -127,11 +133,11 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         
         let config = UIContextMenuConfiguration(
             identifier: nil,
-            previewProvider: nil) { _ in
+            previewProvider: nil) { [weak self] _ in
             
                 let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
                     
-                    print("Download tapped")
+                    self?.downloadTitleAt(indexPath: indexPath)
                     
                 }
                 
