@@ -43,7 +43,13 @@ class DownloadsViewController: UIViewController {
                 
                 self?.titles = titles
                 
-                self?.downloadedTable.reloadData()
+                DispatchQueue.main.async {
+                    
+                    self?.downloadedTable.reloadData()
+                    
+                }
+                
+                
                 
             case .failure(let error):
                 print(error.localizedDescription)
