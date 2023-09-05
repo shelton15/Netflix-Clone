@@ -65,7 +65,6 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     private func downloadTitleAt(indexPath: IndexPath) {
         
-        print("Downloading \(titles[indexPath.row].original_title)")
         
     }
     
