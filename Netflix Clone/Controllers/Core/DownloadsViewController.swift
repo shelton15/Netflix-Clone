@@ -25,6 +25,9 @@ class DownloadsViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         title = "Downloads"
+        
+        view.addSubview(downloadedTable)
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
