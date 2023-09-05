@@ -29,6 +29,7 @@
 		88BF783C2AA79BD20052463E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF783B2AA79BD20052463E /* SceneDelegate.swift */; };
 		88BF783E2AA79BFE0052463E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF783D2AA79BFE0052463E /* AppDelegate.swift */; };
 		88BF78412AA79DCF0052463E /* NetflixCloneModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88BF783F2AA79DCF0052463E /* NetflixCloneModel.xcdatamodeld */; };
+		88BF78432AA7A17C0052463E /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF78422AA7A17C0052463E /* DataPersistenceManager.swift */; };
 		88D490802A98C30200ED9D21 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4907F2A98C30200ED9D21 /* TitleCollectionViewCell.swift */; };
 		88D490832A98CD3700ED9D21 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 88D490822A98CD3700ED9D21 /* SDWebImage */; };
 		88D490852A98CD3700ED9D21 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88D490842A98CD3700ED9D21 /* SDWebImageMapKit */; };
@@ -81,6 +82,7 @@
 		88BF783B2AA79BD20052463E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
 		88BF783D2AA79BFE0052463E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
 		88BF78402AA79DCF0052463E /* NetflixCloneModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetflixCloneModel.xcdatamodel; sourceTree = "<group>"; };
+		88BF78422AA7A17C0052463E /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		88D4907F2A98C30200ED9D21 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		88F9BC032A9D2014006F2F36 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		88F9BC052A9D27EA006F2F36 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				88A9A1742A97F747009F8DD5 /* APICaller.swift */,
+				88BF78422AA7A17C0052463E /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				88A9A1732A9769FD009F8DD5 /* HeroHeaderUIView.swift in Sources */,
 				88BF783C2AA79BD20052463E /* SceneDelegate.swift in Sources */,
 				88A9A16A2A973EA7009F8DD5 /* DownloadsViewController.swift in Sources */,
+				88BF78432AA7A17C0052463E /* DataPersistenceManager.swift in Sources */,
 				88F9BC082A9D4CD5006F2F36 /* SearchResultsViewController.swift in Sources */,
 				88A9A1792A9815F1009F8DD5 /* Extensions.swift in Sources */,
 				88BF77FF2AA5E40A0052463E /* YoutubeSearchResponse.swift in Sources */,
