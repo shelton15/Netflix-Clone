@@ -6,12 +6,23 @@
 //
 
 import Foundation
+import UIKit
 
 
 class DataPersistenceManager {
     
     static let shared = DataPersistenceManager()
     
-    func
+    func downloadTitleWith(model: Title, completion: @escaping (Result<Void, Error>) -> Void) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            
+            return
+            
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+    }
     
 }
